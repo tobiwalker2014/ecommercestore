@@ -2,16 +2,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, run the command:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -20,14 +15,29 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+Create a database on Planetscale.
+
+Create a secret key on your stripe account
+
+Create a .env file in the root folder with this variable and fill variables
+
+```bash
+DATABASE_URL=
+
+STRIPE_SECRET_KEY=
+
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+```
+run command:
+
+```bash
+npx prisma generate
+npx prisma db seed
+```
+
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+For detailed instructions, code examples, and more insights, refer to the [full tutorial](https://www.freecodecamp.org/news/how-to-build-a-ecommerce-website-using-next-js-and-planetscale).
 
 ## Deploy on Vercel
 
